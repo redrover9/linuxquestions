@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript" src="app.js"></script>
+<head>
+<title>Linux Cert Questions</title>
+</head>
+<body>
+<p id="question"></p>
+<div id="answer" style="display: none;"></div>
+<button id="answer_button" name="answer_button" type="button"> Toggle Answer </button>
+<script>
+const questions = Object.keys(qsAndAs)
+const answers = Object.values(qsAndAs)
+const randInt = parseInt(Math.random() * questions.length)
+const randomQuestion = questions[randInt]
+const randomAnswer = answers[randInt]
+var quest = JSON.stringify(randomQuestion, null, 2);
+var ans = JSON.stringify(randomAnswer, null, 2);
+document.getElementById("question").innerHTML = quest;
+document.getElementById("answer").innerHTML = ans;
+  var divToggleVis = document.getElementById("answer");
+  var button = document.getElementById("answer_button");
+ 
+  button.onclick = function() {
+      if (divToggleVis.style.display === 'none') {
+          divToggleVis.style.display = 'block';
+      } else {
+          divToggleVis.style.display = 'none';
+      }
+ 
+  };
+</script>
+<a href="javascript:location.reload(true)">Next Question!</a>
+</body>
+</html>
