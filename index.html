@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <script type="text/javascript" src="app.js"></script>
 <link rel="stylesheet" type="text/css" href="styles.css" />
 <style>
@@ -16,6 +18,10 @@ font-size: 2.5em;
 div {
 font-size: 2.5em;
 }
+body {
+background-color: #000000;
+color: #66ff00;
+}
 </style>
 <head>
 <title>Linux Cert Questions</title>
@@ -24,7 +30,7 @@ font-size: 2.5em;
 <p id="question"></p>
 <div id="answer" style="display: none;"></div>
 <input type="text" id="user_answer">
-<input type="button" value="Submit Answer" style="font-size: 2.5em; color: #00d4ff; background-color: #020024" onclick="checkAns()"> <span id="a" style="font-size: 2.5em"><br>The correct answer is: </span></input>
+<input type="button" value="Submit Answer" style="font-size: 2.5em; color: #66ff00; background-color: #000000" onclick="checkAns()"> <span id="a" style="font-size: 2.5em"><br>The correct answer is: </span></input>
 <br>
         <script>
                 function checkAns()
@@ -46,6 +52,6 @@ document.getElementById("answer").innerHTML = ans;
   var divToggleVis = document.getElementById("answer");
 
 </script>
-<button style="color: #00d4ff; background-color: #020024" type="button" onclick="javascript:location.reload(true)">Next Question!</button>
+<button style="color: #66ff00; background-color: #000000" type="button" onclick="javascript:location.reload(true)">Next Question!</button>
 </body>
 </html>
